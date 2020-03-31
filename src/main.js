@@ -8,6 +8,8 @@ class App {
         this.inputPokemon = document.querySelector('input[name=pokemon]')
         this.pokemonList = document.getElementById('pokemon-list')
 
+        this.contadorPokemons = 0
+
         this.registerPokemon()
     }
 
@@ -43,6 +45,8 @@ class App {
 
             console.log(response)
 
+            this.contadorPokemons++
+
             this.render()
         } catch( error ) {
             this.inputPokemon.value = ''
@@ -71,9 +75,9 @@ class App {
             })
 
             let weightPokemon = document.createElement('p')
-            weightPokemon.appendChild(document.createTextNode(`Tamanho: ${ poke.weight }`))
+            weightPokemon.appendChild(document.createTextNode(`Tamanho: ${ poke.weight }cm`))
 
-            let liPokemon = document.createElement('li') // acostuma a usar o node , para fazer essa coisa e melhor pode cre mas n aprendi node ainda
+            let liPokemon = document.createElement('li')
             liPokemon.appendChild(imgPokemon)
             liPokemon.appendChild(namePokemon)
             liPokemon.appendChild(typePokemon)
