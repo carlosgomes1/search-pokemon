@@ -73,7 +73,7 @@ class App {
             let weightPokemon = document.createElement('p')
             weightPokemon.appendChild(document.createTextNode(`Tamanho: ${ poke.weight }`))
 
-            let liPokemon = document.createElement('li')
+            let liPokemon = document.createElement('li') // acostuma a usar o node , para fazer essa coisa e melhor pode cre mas n aprendi node ainda
             liPokemon.appendChild(imgPokemon)
             liPokemon.appendChild(namePokemon)
             liPokemon.appendChild(typePokemon)
